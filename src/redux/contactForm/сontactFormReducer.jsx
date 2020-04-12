@@ -13,6 +13,8 @@ const addContactReducer = (state = INITIAL_STATE, { type, payload }) => {
       return [...state, payload];
     case Type.DELETE_CONTACT:
       return state.filter(contact => contact.id !== payload.id);
+    case Type.GET_CONTACTS_FROM_LS:
+      return payload.savedContacts;
     default:
       return state;
   }

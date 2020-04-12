@@ -30,8 +30,6 @@ class ContactForm extends Component {
   checkIsInputCorrect = (name, number) => {
     const isNumber = Boolean(Number(number));
     const { onAddContact } = this.props;
-    console.log(isNumber);
-    console.log(name !== '');
     if (isNumber && name !== '') {
       onAddContact({ ...this.state });
     } else if (!isNumber && name === '') {

@@ -16,3 +16,10 @@ export const deleteContactAction = id => ({
     id,
   },
 });
+
+export const getContactsFromLS = savedContacts => ({
+  type: Type.GET_CONTACTS_FROM_LS,
+  payload: {
+    savedContacts,
+  },
+});
